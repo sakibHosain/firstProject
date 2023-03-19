@@ -22,6 +22,7 @@
         <th>Name</th>
         <th>Roll</th>
         <th>Registration No</th>
+        <th>Image</th>
         <th>Action</th>
       </tr>
     </thead>
@@ -32,6 +33,9 @@
         <td>{{$data->name}}</td>
         <td>{{$data->roll}}</td>
         <td>{{$data->reg}}</td>
+        <td>
+          <img src="{{asset('images/'.$data->image)}}" alt="" width="50" height="50">
+        </td>
         <td>
             <a href="{{route('edit.student',$data->id)}}" class="btn btn-success">Edit</a>
             <a href="{{route('delete.student',$data->id)}}" class="btn btn-danger">Delete</a>
